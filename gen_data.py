@@ -71,23 +71,13 @@ if __name__ == '__main__':
 	# generate coefficients
 	num_samples = params['num_samples'] // params['part_max']
 	if params['basis_fct'] == 'polynomial':
-		expr_list, coeff = polynomial_basis(num_samples, 
-											params['num_basis'], 
-											params['mu']) 
+		expr_list, coeff = polynomial_basis(num_samples, params['num_basis'], params['mu']) 
 	elif params['basis_fct'] == 'trigonometric':
-		expr_list, coeff = trigonometric_basis(num_samples, 
-											   params['num_basis'], 
-											   params['mu'], 
-											   params['sigma']) 
+		expr_list, coeff = trigonometric_basis(num_samples, params['num_basis'], params['mu'], params['sigma']) 
 	elif params['basis_fct'] == 'squares':
-		expr_list, coeff = squares_basis(num_samples, 
-										 params['num_basis'], 
-										 params['mu'])			
+		expr_list, coeff = squares_basis(num_samples, params['num_basis'], params['mu'])			
 	elif params['basis_fct'] == 'cookies':
-		expr_list, coeff = cookies_basis(num_samples, 
-										 params['num_basis'], 
-										 params['mu'], 
-										 params['mode'])		
+		expr_list, coeff = cookies_basis(num_samples, params['num_basis'], params['mu'], params['mode'])		
 	else:
 		print('Basis function not found')
 
