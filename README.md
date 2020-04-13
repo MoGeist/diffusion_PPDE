@@ -9,7 +9,7 @@ It requires an installation of [FEniCS](https://fenicsproject.org/), which can, 
 
 ## Recommended Workflow
 
-1. Configure FEM parameters in `utility.py`.
+1. Configure FEM parameters in `gen_data.py`.
 2. Configure dataset parameters in `job_creator_data.sh`.
 3. Run `job_creator_data.sh`.
 4. Launch newly created jobs.

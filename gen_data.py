@@ -29,13 +29,13 @@ def solver(expr):
 default_parameters = {
 	'num_samples': 30000,
 	'basis_fct': 'trigonometric',
-	'mu': 0.1,
+	'mu': 0.1, # shift hyper-parameter 
 	'mode': 'x', # only required for cookies	
 	'sigma': 0, # only required for trigonometric polnomials
 	'num_basis': 2, # actual number of basis functions may vary
-	'finite_element': 'P',  
+	'finite_element': 'P', # see http://femtable.org/ 
 	'inter_deg': 1, #degree of interpolation
-	'mesh_size': 100,
+	'mesh_size': 100, # number of edges in the mesh (number of nodes: edges + 1)
 	'right_hand_side': '20+10*x[0]-5*x[1]', 
 	'folder_name': 'some_dataset', # folder where data is saved
 	'part': 1,
